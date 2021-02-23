@@ -5,7 +5,7 @@ export class RecurrenceRelation {
     readonly relation: relationType;
     readonly init: number[];
 
-    constructor(relation: relationType, init: number[]) {
+    constructor(relation: relationType, init: number[] = []) {
         this.relation = relation;
         this.init = init;
     }
@@ -21,5 +21,16 @@ export class RecurrenceRelation {
         }
 
         return this.relation(endRecChecker, n);
+    }
+
+    hasSolution(k: number, s: number[]): boolean {
+        const init = s.slice(0, k);
+        const r = new RecurrenceRelation(this.relation, init);
+
+        for (let i = 0; i < s.length; i++) {
+            if (s[i] != r.get(i))
+                return false;
+        }
+        return true;
     }
 }

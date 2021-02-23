@@ -6,7 +6,8 @@
   "scripts": {
     "prepack": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-ts": "tsc -w"
+    "watch-ts": "tsc -w",
+    "start": "tsc && node dist"
   },
   "author": "",
   "license": "ISC",
