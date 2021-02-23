@@ -1,0 +1,16 @@
+{
+  "name": "recurrence_relation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "prepack": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-ts": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.1.5"
+  }
+}
